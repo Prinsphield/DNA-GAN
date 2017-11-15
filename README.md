@@ -1,13 +1,14 @@
 # DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images
 
-Maintained by Taihong Xiao
+By Taihong Xiao (maintainer), Jiapeng Hong and Jinwen Ma
 
 ### Introduction
 
 This repo is the official TensorFlow implementation for our paper [DNA-GAN: Learning Disentangled Representations from
 Multi-Attribute Images](https://openreview.net/pdf?id=Syr8Qc1CW).
 DNA-GAN is a supervised method for disentangling multiple factors of variation simultaneously by using
-multi-attribute images. It can manipulate several attributes in the latent representations of images.
+multi-attribute images. It can manipulate several attributes in the latent representations of images,
+which generalizes [GeneGAN](https://github.com/Prinsphield/GeneGAN)
 
 <div align="center">
 <img align="center" src="images/framework.jpg" width="600" alt="DNA-GAN Framework">
@@ -19,7 +20,7 @@ two DNA pieces (latent representations). By the annihilating the recessive patte
 ![](http://quicklatex.com/cache3/05/ql_088d41851d100d390593490aaa154d05_l3.png) and swapping
 two pieces, we could obtain another two DNA pieces. Therefore, we could obtain four images through
 an decoder. The reconstruction loss is used to ensure the consistency between A1 and A, B1 and B.
-The adversarial discriminator loss helps generate images A2 and B2 that are with novel i-th attribute.
+The adversarial discriminator loss helps generate novel images A2 and B2.
 Through iterative training, DNA-GAN is able to disentangle all factors of variations.
 
 ### Requirement
@@ -86,7 +87,7 @@ What if I want to change my hairstyle everyday? No problem.
 
     python test.py -m matrix -a Bangs Eyeglasses --swap_list 0 -i input_img.jpg --targets target_img0.jpg -target_img1.jpg target_img2.jpg target_img3.jpg -s 5 5
 
-Give your selfie as input, and several hair models as targets images. Which hairstyle suits you best?
+Take your selfie as input, and several hair models as targets images. Which hairstyle suits you best?
 
 <div align="center">
 <img align="center" src="images/four_matrix.jpg" alt="four_matrix">
@@ -99,7 +100,7 @@ Interpolation on different Bangs
 
 #### 3. Interpolation on Two Attributes
 
-The most amazing thing that we can interpolating two attributes in the same time.
+The most amazing thing is that we can interpolating two attributes in the same time.
 
     python test.py -m interpolation2 -a Bangs Eyeglasses --swap_list 0 1 -i input_img.jpg --targets target_img0.jpg target_img1.jpg -s 5 5
 
@@ -112,4 +113,5 @@ Interpolation on Bangs and Eyeglasses
 <br/>
 
 
+For more interpolation results, please refer to our [paper](https://openreview.net/pdf?id=Syr8Qc1CW)
 
