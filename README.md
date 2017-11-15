@@ -1,6 +1,6 @@
 # DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images
 
-By Taihong Xiao (maintainer), Jiapeng Hong and Jinwen Ma
+By Taihong Xiao, Jiapeng Hong and Jinwen Ma
 
 ### Introduction
 
@@ -8,7 +8,8 @@ This repo is the official TensorFlow implementation for our paper [DNA-GAN: Lear
 Multi-Attribute Images](https://openreview.net/pdf?id=Syr8Qc1CW).
 DNA-GAN is a supervised method for disentangling multiple factors of variation simultaneously by using
 multi-attribute images. It can manipulate several attributes in the latent representations of images,
-which generalizes [GeneGAN](https://github.com/Prinsphield/GeneGAN)
+which is a generalization of [GeneGAN](https://github.com/Prinsphield/GeneGAN). However, DNA-GAN abolishes
+the nulling loss and employes a single discriminator for guiding images generation.
 
 <div align="center">
 <img align="center" src="images/framework.jpg" width="600" alt="DNA-GAN Framework">
@@ -84,10 +85,11 @@ Interpolation Eyeglasses
 #### 2. Matrix Interpolation on One Attributes
 
 What if I want to change my hairstyle everyday? No problem.
+Take your selfie as input, and several hair models as targets images.
 
     python test.py -m matrix -a Bangs Eyeglasses --swap_list 0 -i input_img.jpg --targets target_img0.jpg -target_img1.jpg target_img2.jpg target_img3.jpg -s 5 5
 
-Take your selfie as input, and several hair models as targets images. Which hairstyle suits you best?
+Which hairstyle suits you best?
 
 <div align="center">
 <img align="center" src="images/four_matrix.jpg" alt="four_matrix">
@@ -113,5 +115,5 @@ Interpolation on Bangs and Eyeglasses
 <br/>
 
 
-For more interpolation results, please refer to our [paper](https://openreview.net/pdf?id=Syr8Qc1CW)
+For more interpolation results, please refer to our [paper](https://openreview.net/pdf?id=Syr8Qc1CW).
 
