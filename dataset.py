@@ -63,7 +63,7 @@ class Config:
 
     buffer_size = 640
 
-    max_iter = 500000
+    max_iter = 200000
 
     weight_decay = 5e-5
 
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     config = Config()
     celebA = Dataset(['Bangs', 'Smiling'])
 
-    batch1_pos, batch1_neg, batch2_pos, batch2_neg = celebA.input()
+    batchs, labels = celebA.input()
     # batch = celebA.input1()
 
     X1 = tf.placeholder(tf.float32, config.nhwc)
@@ -157,12 +157,11 @@ if __name__ == '__main__':
     threads = tf.train.start_queue_runners(sess=sess,coord=coord)
 
     t1 = time.time()
-    for i in range(200):
+    for i in range(100):
         # print(i, sess.run(Y, feed_dict={X1: sess.run(batch1), X2: sess.run(batch2)}))
         print(i)
-        img1_pos, img1_neg, img2_pos, img2_neg = sess.run([batch1_pos, batch1_neg, batch2_pos, batch2_neg])
-        print(img1_pos.shape, img1_neg.shape, img2_pos.shape, img2_neg.shape)
-        # print(sess.run([Z1,Z2], feed_dict={X1: batch_img1, X2:batch_img2}))
+        batch_images, batch_labels = sess.run([batchs, labels])
+        print(batch_images[0].shape, batch_images[1].shape, batch_labels[0].shape, batch_labels[1].shape)
 
     t2 = time.time()
     print(t2-t1)
