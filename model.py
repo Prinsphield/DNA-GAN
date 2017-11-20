@@ -274,6 +274,7 @@ if __name__ == "__main__":
 
     celebA = Dataset(['Eyeglasses', 'Smiling'])
     image_batch = celebA.input()
+    print(len(image_batch))
 
     DNA_GAN = Model(['Eyeglasses', 'Smiling'])
     # from IPython import embed;embed();exit()
