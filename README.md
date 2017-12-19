@@ -2,6 +2,9 @@
 
 By Taihong Xiao, Jiapeng Hong and Jinwen Ma
 
+Note the code in this repo is not optimized for speed. A more efficient Pytorch version for higher resolution images will be released soon.
+Please stay tuned!
+
 ### Introduction
 
 This repo is the official TensorFlow implementation for our paper DNA-GAN: Learning Disentangled Representations from
