@@ -5,6 +5,16 @@ By Taihong Xiao, Jiapeng Hong and Jinwen Ma
 Note the code in this repo is not optimized for speed. A more efficient Pytorch version for higher resolution images will be released soon.
 Please stay tuned!
 
+If you find it useful, please cite our paper.
+```
+@article{xiao2018dna,
+  title={DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images},
+  author={Xiao, Taihong and Hong, Jiapeng and Ma, Jinwen},
+  journal={International Conference on Learning Representations, Workshop},
+  year={2018}
+}
+```
+
 ### Introduction
 
 This repo is the official TensorFlow implementation for our paper DNA-GAN: Learning Disentangled Representations from
