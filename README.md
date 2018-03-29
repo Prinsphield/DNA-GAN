@@ -18,7 +18,7 @@ If you find it useful, please cite our paper.
 ### Introduction
 
 This repo is the official TensorFlow implementation for our paper DNA-GAN: Learning Disentangled Representations from
-Multi-Attribute Images ([OpenReview](https://openreview.net/pdf?id=Syr8Qc1CW), [ArXiv](https://arxiv.org/abs/1711.05415)).
+Multi-Attribute Images ([OpenReview](https://openreview.net/pdf?id=rkX1FF_UM), [ArXiv](https://arxiv.org/abs/1711.05415v2)).
 DNA-GAN is a supervised method for disentangling multiple factors of variation simultaneously by using
 multi-attribute images. It can manipulate several attributes in the latent representations of images,
 which is a generalization of [GeneGAN](https://github.com/Prinsphield/GeneGAN). However, DNA-GAN abolishes
