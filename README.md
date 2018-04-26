@@ -2,8 +2,7 @@
 
 By Taihong Xiao, Jiapeng Hong and Jinwen Ma
 
-Note the code in this repo is not optimized for speed. A more efficient Pytorch version for higher resolution images will be released soon.
-Please stay tuned!
+Note the code in this repo is not optimized for speed. ~~A more efficient Pytorch version for higher resolution images will be released soon. Please stay tuned!~~  **I have developed a new method [ELEGANT](https://arxiv.org/abs/1803.10562) for better performance and efficiency, please visit [here](https://github.com/Prinsphield/ELEGANT).**
 
 If you find it useful, please cite our paper.
 ```
