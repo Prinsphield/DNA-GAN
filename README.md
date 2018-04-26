@@ -2,8 +2,6 @@
 
 By Taihong Xiao, Jiapeng Hong and Jinwen Ma
 
-Note the code in this repo is not optimized for speed. ~~A more efficient Pytorch version for higher resolution images will be released soon. Please stay tuned!~~  **I have developed a new method [ELEGANT](https://arxiv.org/abs/1803.10562) for better performance and efficiency, please visit [here](https://github.com/Prinsphield/ELEGANT).**
-
 If you find it useful, please cite our paper.
 ```
 @article{xiao2018dna,
@@ -14,14 +12,17 @@ If you find it useful, please cite our paper.
 }
 ```
 
+Note the code in this repo is not optimized for speed. ~~A more efficient Pytorch version for higher resolution images will be released soon. Please stay tuned!~~  **I have developed a new method [ELEGANT](https://arxiv.org/abs/1803.10562) for better performance and efficiency, please visit [here](https://github.com/Prinsphield/ELEGANT).**
+
+
 ### Introduction
 
 This repo is the official TensorFlow implementation for our paper DNA-GAN: Learning Disentangled Representations from
 Multi-Attribute Images ([OpenReview](https://openreview.net/pdf?id=rkX1FF_UM), [ArXiv](https://arxiv.org/abs/1711.05415v2)).
 DNA-GAN is a supervised method for disentangling multiple factors of variation simultaneously by using
 multi-attribute images. It can manipulate several attributes in the latent representations of images,
-which is a generalization of [GeneGAN](https://github.com/Prinsphield/GeneGAN). However, DNA-GAN abolishes
-the nulling loss and employes a single discriminator for guiding images generation.
+which is a generalization of [GeneGAN](https://github.com/Prinsphield/GeneGAN). However, DNA-GAN replaces
+the explicit nulling loss with the annihilating operation and employes a single discriminator for guiding images generation on multiple attributes.
 
 <div align="center">
 <img align="center" src="images/framework.jpg" width="600" alt="DNA-GAN Framework">
